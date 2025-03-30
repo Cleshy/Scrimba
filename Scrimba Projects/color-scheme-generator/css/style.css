@@ -1,8 +1,13 @@
 :root {
   --clr-bg-light: #fff;
   --clr-bg-dark: #1f2937;
+  --clr-light: #111827;
 
   --clr-btn-bg-dark: #3d4b60;
+
+  --bg-body: var(--clr-bg-light);
+  --bg-icons: var(--clr-bg-light);
+  --clr-body: var(--clr-light);
 }
 
 html {
@@ -11,7 +16,7 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   position: relative;
 }
 
@@ -26,14 +31,28 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  padding: 1rem;
 }
 
-main {
+button,
+input[type="color"] {
+  cursor: pointer;
+}
+
+main,
+.color-container {
   height: 100vh;
 }
 
-main > .color {
+.color-container > .color {
   height: 18%;
+}
+
+.color {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding-right: 2rem;
 }
 
 .color-1 {
@@ -56,8 +75,35 @@ main > .color {
   background-color: green;
 }
 
+.copy-color {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+  font-size: 1.4rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--clr-bg-light);
+}
+
 .mode-toggler {
   position: absolute;
   top: 10px;
   left: 10px;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2.25rem;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--clr-bg-light);
+}
+
+.toggle,
+.copy {
+  color: var(--clr-light);
+}
+
+.copy {
+  font-size: 1.8rem;
 }
