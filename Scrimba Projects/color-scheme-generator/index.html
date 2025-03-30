@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
     <!-- Google Font: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,15 +20,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Color Scheme Generator</title>
   </head>
   <body>
     <header>
-      <button id="mode-toggler" class="mode-toggler" aria-label="Toggle light/dark mode"><i class="toggle fa-solid fa-moon"></i></button>
-      <input type="color" name="color-picker" id="color-picker" />
+      <a class="logo hidden" id="logo" href="https://github.com/Cleshy" target="_blank"><i class="fa-brands fa-github github"></i>Cleshy</a>
+      <button id="mode-toggler" class="mode-toggler" aria-label="Toggle light/dark mode"><i class="toggle fa-solid fa-moon"></i><i class="toggle fa-solid fa-sun hidden"></i></button>
+      <input class="color-picker" type="color" name="color-picker" id="color-picker" />
       <select class="select-scheme" name="select-scheme" id="select-scheme">
         <option value="monochrome">Monochrome</option>
         <option value="monochrome-light">Monochrome-light</option>
@@ -34,27 +38,35 @@
         <option value="analogic-complement">Analogic-complement</option>
         <option value="triad">Triad</option>
       </select>
-      <button class="create-scheme">Create</button>
+      <button id="create-scheme" class="create-scheme">Create</button>
     </header>
     <main>
-      <div id="color-container" class="color-container">
-        <div class="color color-1" data-id="1">
+      <section id="color-container" class="color-container">
+        <div class="color">
           <button class="copy-color">#ffffff<i class="copy fa-solid fa-copy"></i></button>
         </div>
-        <div class="color color-2" data-id="2">
+        <div class="color">
           <button class="copy-color">#000000<i class="copy fa-solid fa-copy"></i></ion-icon></button>
         </div>
-        <div class="color color-3" data-id="3">
+        <div class="color">
           <button class="copy-color">#111111<i class="copy fa-solid fa-copy"></i></ion-icon></button>
         </div>
-        <div class="color color-4" data-id="4">
+        <div class="color">
           <button class="copy-color">#433433<i class="copy fa-solid fa-copy"></i></ion-icon></button>
         </div>
-        <div class="color color-5" data-id="5">
+        <div class="color">
           <button class="copy-color">#854922<i class="copy fa-solid fa-copy"></i></ion-icon></button>
         </div>
       </div>
+      <div class="modal-container" id="modal-container">
+        <div class="modal">
+          <h3>Welcome to the Color Scheme Generator!</h3>
+          <p>Please be patient while we generate your color scheme. The colors are being fetched from an external resource, and it might take a moment. <span>Thank you for your understanding!</span></p>
+          <button class="modal-btn" id="modal-btn">I understand!</button>
+        </div>
+      </div>
     </main>
-    <script src="script.js"></script>
+    <script type="module" src="js/config.js"></script>
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>
