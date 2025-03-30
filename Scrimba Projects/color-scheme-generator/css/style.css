@@ -1,24 +1,17 @@
 :root {
-  /* Light */
-  --bg-body-light: #fff;
-  --clr-light: #2b283a;
+  --background: #fff;
+  --text: #2b283a;
+  --scheme-color-text: #111827;
+  --get-color-text: #374151;
+  --border: #d1d5db;
+}
 
-  --clr-select-light: #111827;
-
-  --bg-btn-light: #ffffff;
-  --clr-btn-light: #374151;
-
-  --border-light: #d1d5db;
-
-  /* Dark */
-  --bg-dark: #1f2937;
-  --clr-dark: #d5d4d8;
-
-  --bg-select-dark: #1f2937;
-  --clr-select-dark: #d5d4d8;
-
-  --bg-btn-dark: #3d4b60;
-  --clr-btn-dark: #ffffff;
+/* Dark mode */
+:root.dark-mode {
+  --background: #1f293a;
+  --text: #e2e8f0;
+  --scheme-color-text: #cbd5e0;
+  --get-color-text: #a0aec0;
 }
 
 html {
@@ -26,15 +19,14 @@ html {
 }
 
 body {
+  background-color: var(--background);
+  color: var(--text);
   font-family: "Inter", sans-serif;
   font-size: 1.6rem;
   position: relative;
-  background-color: var(--bg-body-light);
-  color: var(--clr-light);
 }
 
 header {
-  background-color: var(--clr-bg-body-light);
   height: 10%;
   width: 100%;
   position: absolute;
@@ -45,6 +37,7 @@ header {
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem;
+  background-color: var(--background);
 }
 
 button,
@@ -53,14 +46,9 @@ input[type="color"] {
   border-radius: 5px;
 }
 
-.toggle,
-.copy {
-  color: var(--clr-light);
-}
-
-.mode-toggler,
-.copy-color {
-  background-color: var(--bg-btn-light);
+button,
+select {
+  border-radius: 6px;
 }
 
 main,
@@ -77,6 +65,10 @@ main,
   flex-direction: row-reverse;
   align-items: center;
   padding-right: 2rem;
+}
+
+.copy-color {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .color-1 {
@@ -99,9 +91,17 @@ main,
   background-color: green;
 }
 
-.scheme-select {
-  border: 1px solid var(--border-light);
-  background-color: var(--bg-body-light);
+.select-scheme,
+.create-scheme {
+  border: 1px solid var(--border);
+}
+
+.create-scheme {
+}
+
+.select-scheme {
+  padding: 0.5rem 1rem;
+  background-color: var(--background);
 }
 
 .copy-color {
@@ -113,6 +113,8 @@ main,
   padding: 0.75rem;
   border: none;
   border-radius: 5px;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 .mode-toggler {
@@ -124,8 +126,55 @@ main,
   font-size: 2.25rem;
   border-radius: 50px;
   border: none;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 .copy {
   font-size: 1.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .color-container {
+    display: flex;
+  }
+
+  .color-container > .color {
+    flex: 1;
+    height: 100vh;
+  }
+
+  .color {
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 3rem;
+  }
+
+  .mode-toggler {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2.25rem;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--background);
+    color: var(--text);
+  }
 }

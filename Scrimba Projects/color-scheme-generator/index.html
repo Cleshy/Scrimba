@@ -23,8 +23,9 @@
   </head>
   <body>
     <header>
+      <button id="mode-toggler" class="mode-toggler" aria-label="Toggle light/dark mode"><i class="toggle fa-solid fa-moon"></i></button>
       <input type="color" name="color-picker" id="color-picker" />
-      <select class="scheme-select" name="scheme-select" id="scheme-select">
+      <select class="select-scheme" name="select-scheme" id="select-scheme">
         <option value="monochrome">Monochrome</option>
         <option value="monochrome-light">Monochrome-light</option>
         <option value="monochrome-dark">Monochrome-dark</option>
@@ -33,28 +34,27 @@
         <option value="analogic-complement">Analogic-complement</option>
         <option value="triad">Triad</option>
       </select>
-      <button>Create Scheme</button>
+      <button class="create-scheme">Create</button>
     </header>
     <main>
       <div id="color-container" class="color-container">
         <div class="color color-1" data-id="1">
           <button class="copy-color">#ffffff<i class="copy fa-solid fa-copy"></i></button>
         </div>
-        <div class="color color-2" data-id="1">
+        <div class="color color-2" data-id="2">
           <button class="copy-color">#000000<i class="copy fa-solid fa-copy"></i></ion-icon></button>
         </div>
-        <div class="color color-3" data-id="1">
+        <div class="color color-3" data-id="3">
           <button class="copy-color">#111111<i class="copy fa-solid fa-copy"></i></ion-icon></button>
         </div>
-        <div class="color color-4" data-id="1">
+        <div class="color color-4" data-id="4">
           <button class="copy-color">#433433<i class="copy fa-solid fa-copy"></i></ion-icon></button>
         </div>
-        <div class="color color-5" data-id="1">
+        <div class="color color-5" data-id="5">
           <button class="copy-color">#854922<i class="copy fa-solid fa-copy"></i></ion-icon></button>
         </div>
       </div>
     </main>
-    <button id="mode-toggler" class="mode-toggler" aria-label="Toggle light/dark mode"><i class="toggle fa-solid fa-moon"></i></button>
     <script src="script.js"></script>
   </body>
 </html>
