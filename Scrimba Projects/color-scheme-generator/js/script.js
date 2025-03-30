@@ -15,28 +15,33 @@ if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
 
 function setMode() {
   const currentMode = localStorage.getItem("mode");
+  const sunIcon = document.querySelector(".fa-sun");
+  const moonIcon = document.querySelector(".fa-moon");
+
   if (currentMode === "dark") {
     root.classList.add("dark-mode");
+    sunIcon.classList.remove("hidden");
+    moonIcon.classList.add("hidden");
   } else {
     root.classList.remove("dark-mode");
+    sunIcon.classList.add("hidden");
+    moonIcon.classList.remove("hidden");
   }
 
   const modeToggler = document.getElementById("mode-toggler");
-  const sunIcon = document.querySelector(".fa-sun");
-  const moonIcon = document.querySelector(".fa-moon");
 
   modeToggler.addEventListener("click", () => {
     const currentMode = localStorage.getItem("mode");
     if (currentMode === "dark") {
-      sunIcon.classList.remove("hidden");
-      moonIcon.classList.add("hidden");
       localStorage.setItem("mode", "light");
       root.classList.remove("dark-mode");
-    } else {
       sunIcon.classList.add("hidden");
       moonIcon.classList.remove("hidden");
+    } else {
       localStorage.setItem("mode", "dark");
       root.classList.add("dark-mode");
+      sunIcon.classList.remove("hidden");
+      moonIcon.classList.add("hidden");
     }
   });
 }
