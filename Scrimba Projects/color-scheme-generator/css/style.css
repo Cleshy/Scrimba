@@ -1,6 +1,6 @@
 :root {
-  --background: #fff;
-  --text: #2b283a;
+  --color-bg: #fff;
+  --color-text: #2b283a;
   --scheme-color-text: #111827;
   --scheme-color-bg: #fff;
   --get-color-bg: #fff;
@@ -11,12 +11,16 @@
 
   --modal-btn-bg-hover: #1f293a;
   --modal-btn-text-hover: #e2e8f0;
+
+  --border-radius-small: 6px;
+  --border-radius-medium: 15px;
+  --border-radius-large: 50px;
 }
 
 /* Dark mode */
 :root.dark-mode {
-  --background: #1f293a;
-  --text: #e2e8f0;
+  --color-bg: #1f293a;
+  --color-text: #e2e8f0;
   --scheme-color-text: #cbd5e0;
   --get-color-bg: #3d4b60;
   --get-color-text: #fff;
@@ -31,9 +35,9 @@ html {
 }
 
 body {
-  background-color: var(--background);
-  color: var(--text);
-  font-family: "Inter", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', sans-serif;
   font-size: 1.6rem;
   position: relative;
 }
@@ -49,18 +53,14 @@ header {
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem;
-  background-color: var(--background);
+  background-color: var(--color-bg);
 }
 
 button,
-input[type="color"] {
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button,
+input[type='color'],
 select {
-  border-radius: 6px;
+  cursor: pointer;
+  border-radius: var(--border-radius-small);
 }
 
 main,
@@ -100,7 +100,7 @@ main,
 }
 
 .select-scheme {
-  background-color: var(--background);
+  background-color: var(--color-bg);
   color: var(--scheme-color-text);
 }
 
@@ -112,9 +112,9 @@ main,
   font-size: 1.4rem;
   padding: 0.75rem;
   border: none;
-  border-radius: 5px;
-  background-color: var(--background);
-  color: var(--text);
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 .mode-toggler {
@@ -124,10 +124,10 @@ main,
   width: 4rem;
   height: 4rem;
   font-size: 2.25rem;
-  border-radius: 50px;
+  border-radius: var(--border-radius-large);
   border: none;
-  background-color: var(--background);
-  color: var(--text);
+  background-color: var(--color-bg);
+  color: var(--color-text);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
 }
 
@@ -137,15 +137,8 @@ main,
 
 @media screen and (min-width: 768px) {
   header {
-    height: 10%;
-    width: 100%;
-    position: absolute;
     top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
     justify-content: space-evenly;
-    gap: 1rem;
     padding: 3rem;
   }
 
@@ -170,13 +163,9 @@ main,
     top: 0;
     bottom: 0;
     left: 0;
-    background-color: var(--background);
-    color: var(--text);
+    background-color: var(--color-bg);
+    color: var(--color-text);
     box-shadow: none;
-  }
-
-  .hidden {
-    display: block;
   }
 }
 
@@ -191,7 +180,7 @@ main,
   display: flex;
   gap: 1rem;
   align-items: center;
-  color: var(--text);
+  color: var(--color-text);
 }
 
 .modal-container {
@@ -207,11 +196,12 @@ main,
 }
 
 .modal {
+  transform-origin: center;
   text-align: center;
-  background-color: var(--background);
-  color: var(--text);
+  background-color: var(--color-bg);
+  color: var(--color-text);
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: var(--border-radius-medium);
   max-width: 40rem;
   z-index: 9999;
   animation: showModal 1s ease-in-out;
@@ -220,7 +210,7 @@ main,
 @keyframes showModal {
   from {
     opacity: 0;
-    transform: scale(0);
+    transform: scale(0.3);
   }
 
   to {
@@ -229,7 +219,7 @@ main,
   }
 }
 
-.modal h3 {
+.modal h1 {
   margin-bottom: 1rem;
   font-weight: 800;
   line-height: 1.25;
@@ -251,7 +241,7 @@ main,
   border: none;
   padding: 1rem 2rem;
   font-weight: 600;
-  background-color: var(--background);
+  background-color: var(--color-bg);
   color: var(--get-color-text);
   border: 1px solid var(--border);
   transition: all 0.2s ease-in-out;

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A simple color scheme generator to create beautiful color palettes." />
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
@@ -11,10 +12,8 @@
     <!-- Google Font: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=optional" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=optional" />
     <!-- Fontawesome CDN -->
     <link
       rel="stylesheet"
@@ -27,7 +26,7 @@
   <body>
     <header>
       <a class="logo hidden" id="logo" href="https://github.com/Cleshy" target="_blank"><i class="fa-brands fa-github github"></i>Cleshy</a>
-      <button id="mode-toggler" class="mode-toggler" aria-label="Toggle light/dark mode">
+      <button id="mode-toggler" class="mode-toggler" aria-label="Toggle light/dark mode" tabindex="0">
         <i class="toggle fa-solid fa-moon"></i>
         <i class="toggle fa-solid fa-sun hidden"></i></button>
       <input class="color-picker" type="color" name="color-picker" id="color-picker" />
@@ -62,13 +61,13 @@
       </div>
       <div class="modal-container" id="modal-container">
         <div class="modal">
-          <h3>Welcome to the Color Scheme Generator!</h3>
+          <h1>Welcome to the Color Scheme Generator!</h1>
           <p>Please be patient while we generate your color scheme. The colors are being fetched from an external resource, and it might take a moment. <span>Thank you for your understanding!</span></p>
           <button class="modal-btn" id="modal-btn">I understand!</button>
         </div>
       </div>
     </main>
-    <script type="module" src="js/config.js"></script>
-    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/config.js" defer></script>
+    <script type="module" src="js/script.js" defer></script>
   </body>
 </html>

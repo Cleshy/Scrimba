@@ -1,5 +1,4 @@
-export const MAX_COLOR_COUNT = 5;
-export const hexCharacters = [
+const hexCharacters = [
   0,
   1,
   2,
@@ -10,20 +9,20 @@ export const hexCharacters = [
   7,
   8,
   9,
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
+  'A',
+  'B',
+  'C',
+  'D',
+  'E',
+  'F',
 ];
 
-export function getCharacter(index) {
+function getCharacter(index) {
   return hexCharacters[index];
 }
 
-export function generateNewColor() {
-  let hexColor = "#";
+export function generateHexColor() {
+  let hexColor = '#';
 
   for (let i = 0; i < 6; i++) {
     const randomPosition = Math.floor(Math.random() * hexCharacters.length);

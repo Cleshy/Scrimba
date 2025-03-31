@@ -1,82 +1,68 @@
-import * as config from "./config.js";
+import { generateHexColor } from './config.js';
 
 const root = document.documentElement;
-const createScheme = document.getElementById("create-scheme");
+const logo = document.getElementById('logo');
+const createSchemeBtn = document.getElementById('create-scheme');
+const colorElements = document.querySelectorAll('.color');
+const copyElements = document.querySelectorAll('.copy-color');
 
-const colorContainer = document.getElementById("color-container");
-const colorElements = document.querySelectorAll(".color");
-const copyElements = document.querySelectorAll(".copy-color");
-
-const logo = document.getElementById("logo");
-
-if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  root.classList.add("dark-mode");
-}
-
-function setMode() {
-  const currentMode = localStorage.getItem("mode");
-  const sunIcon = document.querySelector(".fa-sun");
-  const moonIcon = document.querySelector(".fa-moon");
-
-  if (currentMode === "dark") {
-    root.classList.add("dark-mode");
-    sunIcon.classList.remove("hidden");
-    moonIcon.classList.add("hidden");
-  } else {
-    root.classList.remove("dark-mode");
-    sunIcon.classList.add("hidden");
-    moonIcon.classList.remove("hidden");
-  }
-
-  const modeToggler = document.getElementById("mode-toggler");
-
-  modeToggler.addEventListener("click", () => {
-    const currentMode = localStorage.getItem("mode");
-    if (currentMode === "dark") {
-      localStorage.setItem("mode", "light");
-      root.classList.remove("dark-mode");
-      sunIcon.classList.add("hidden");
-      moonIcon.classList.remove("hidden");
-    } else {
-      localStorage.setItem("mode", "dark");
-      root.classList.add("dark-mode");
-      sunIcon.classList.remove("hidden");
-      moonIcon.classList.add("hidden");
-    }
-  });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   init();
 });
 
 function init() {
   handleModal();
-  handleLoadingWindowWidth();
+  handleLogoDisplay();
   setStartingColors();
+  handleSchemeGenerating();
+  handleColorCopy();
   setMode();
 }
 
-function handleLoadingWindowWidth() {
-  if (window.innerWidth >= 768) {
-    logo.classList.remove("hidden");
-    createScheme.textContent = "Create a color scheme";
-  }
+function handleModal() {
+  document.body.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal-btn')) {
+      document.getElementById('modal-container').classList.add('hidden');
+    }
+  });
 }
 
-function getColorPalette() {
-  const selectedScheme = document.getElementById("select-scheme").value;
-  const pickedColor = document.getElementById("color-picker").value;
-  const color = pickedColor.slice(1);
+function handleLogoDisplay() {
+  const updateLogoVisibility = () => {
+    const isLargeScreen = window.matchMedia('(min-width: 768px)').matches;
+    logo.classList.toggle('hidden', !isLargeScreen);
+    createSchemeBtn.textContent = isLargeScreen
+      ? 'Create a color scheme'
+      : 'Create';
+  };
 
-  fetch(
-    `https://www.thecolorapi.com/scheme?hex=${color}&mode=${selectedScheme}&count=5`
-  )
-    .then((response) => response.json())
-    .then((colorPalette) => renderColors(colorPalette.colors));
+  updateLogoVisibility();
+  window.addEventListener('resize', updateLogoVisibility);
 }
 
-createScheme.addEventListener("click", getColorPalette);
+function setStartingColors() {
+  colorElements.forEach((colorEl, index) => {
+    const color = generateHexColor();
+    colorEl.style.backgroundColor = color;
+    copyElements[
+      index
+    ].innerHTML = `${color} <i class="copy fa-solid fa-copy"></i>`;
+  });
+}
+
+function handleSchemeGenerating() {
+  createSchemeBtn.addEventListener('click', () => {
+    const selectedScheme = document.getElementById('select-scheme').value;
+    const pickedColor = document.getElementById('color-picker').value;
+    const color = pickedColor.slice(1);
+
+    fetch(
+      `https://www.thecolorapi.com/scheme?hex=${color}&mode=${selectedScheme}&count=5`
+    )
+      .then((response) => response.json())
+      .then((colorScheme) => renderColors(colorScheme.colors));
+  });
+}
 
 function renderColors(fetchedColors) {
   fetchedColors.forEach((color, index) => {
@@ -86,43 +72,36 @@ function renderColors(fetchedColors) {
   });
 }
 
+function setMode() {
+  const modeToggler = document.getElementById('mode-toggler');
+  const sunIcon = document.querySelector('.fa-sun');
+  const moonIcon = document.querySelector('.fa-moon');
+  const isDarkMode = localStorage.getItem('mode') === 'dark';
+
+  root.classList.toggle('dark-mode', isDarkMode);
+  sunIcon.classList.toggle('hidden', !isDarkMode);
+  moonIcon.classList.toggle('hidden', isDarkMode);
+
+  modeToggler.addEventListener('click', () => {
+    const newMode = root.classList.toggle('dark-mode') ? 'dark' : 'light';
+    localStorage.setItem('mode', newMode);
+    sunIcon.classList.toggle('hidden');
+    moonIcon.classList.toggle('hidden');
+  });
+}
+
 function handleColorCopy() {
-  colorContainer.addEventListener("click", (e) => {
-    const target = e.target.closest(".copy-color");
-    if (target) {
-      const originalText = target.textContent;
+  copyElements.forEach((copyEl) => {
+    copyEl.addEventListener('click', () => {
+      const originalText = copyEl.textContent;
       navigator.clipboard.writeText(originalText).then(() => {
-        target.innerHTML =
-          "Copied!" + `<i class="fa-solid fa-check copy checkmark"></i>`;
+        copyEl.innerHTML =
+          'Copied!' + `<i class="fa-solid fa-check copy checkmark"></i>`;
 
         setTimeout(() => {
-          target.innerHTML = `${originalText} <i class="copy fa-solid fa-copy"></i></ion-icon>`;
+          copyEl.innerHTML = `${originalText} <i class="copy fa-solid fa-copy"></i></ion-icon>`;
         }, 2000);
       });
-    }
-  });
-}
-
-handleColorCopy();
-
-document.getElementById("modal-btn").addEventListener("click", (e) => {
-  document.getElementById("modal-container").classList.add("hidden");
-});
-
-function handleModal() {
-  document.body.addEventListener("click", (e) => {
-    if (e.target.classList.contains("modal-btn")) {
-      document.getElementById("modal-container").classList.add("hidden");
-    }
-  });
-}
-
-function setStartingColors() {
-  colorElements.forEach((colorEl, index) => {
-    const currentColor = config.generateNewColor();
-    colorEl.style.backgroundColor = currentColor;
-    copyElements[
-      index
-    ].innerHTML = `${currentColor} <i class="copy fa-solid fa-copy"></i>`;
+    });
   });
 }
