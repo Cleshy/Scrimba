@@ -4,7 +4,9 @@
 
 :root {
   --image-border-radius: 2.33px;
+  --input-border-radius: 6px;
 
+  --clr-text: #fff;
   --clr-bg: #fff;
   --clr-search-bar: #6b7280;
   --clr-icon: #dfdddd;
@@ -17,6 +19,7 @@
 }
 
 :root.dark-mode {
+  --clr-text: #333;
   --clr-bg: #121212;
   --clr-search-bar: #2e2e2f;
   --clr-icon: #2e2e2f;
@@ -26,4 +29,104 @@
   --clr-movie-info: #ffffff;
   --clr-add-watchlist: #ffffff;
   --clr-movie-text: #a5a5a5;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+/* =============== *\
+    Header 
+\* =============== */
+
+.header {
+  background-color: #000;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../images/header_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--clr-text);
+  padding: 1.5rem 0 2rem 0;
+  text-align: center;
+}
+
+.search-container {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h1 {
+  font-size: 4.2rem;
+}
+
+.watchlist-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 1rem;
+  text-align: center;
+}
+
+.watchlist-container i {
+  font-size: 2.5rem;
+}
+
+.watchlist-link {
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--clr-text);
+}
+
+/* =============== *\
+    Main 
+\* =============== */
+
+.main {
+}
+
+.search-box {
+  background-color: var(--clr-bg);
+  display: flex;
+  align-items: center;
+  padding: 0.9rem 1.3rem;
+  gap: 0.8rem;
+  border-radius: var(--input-border-radius);
+}
+
+.icon {
+  color: var(--clr-icon);
+  font-size: 2rem;
+}
+
+input {
+  font-size: 1.4rem;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  border-radius: var(--input-border-radius);
+  padding: 0.9rem 4.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: #374151;
+  font-size: 1.4rem;
 }
