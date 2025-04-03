@@ -1,0 +1,29 @@
+/* =============== *\
+    Global Styles 
+\* =============== */
+
+:root {
+  --image-border-radius: 2.33px;
+
+  --clr-bg: #fff;
+  --clr-search-bar: #6b7280;
+  --clr-icon: #dfdddd;
+  --clr-btn-bg: #f9fafb;
+  --clr-btn-border: #d1d5db;
+
+  --clr-movie-info: #111827;
+  --clr-add-watchlist: #111827;
+  --clr-movie-text: #6b7280;
+}
+
+:root.dark-mode {
+  --clr-bg: #121212;
+  --clr-search-bar: #2e2e2f;
+  --clr-icon: #2e2e2f;
+  --clr-btn-bg: #4b4b4b;
+  --clr-btn-border: transparent;
+
+  --clr-movie-info: #ffffff;
+  --clr-add-watchlist: #ffffff;
+  --clr-movie-text: #a5a5a5;
+}
