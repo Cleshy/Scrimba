@@ -25,31 +25,23 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="heading-primary">Find your film</h1>
+      <h1 class="heading-primary">My Watchlist</h1>
       <div class="watchlist-container">
-        <i class="fa-regular fa-bookmark watchlist-icon"></i>
-        <a href="watchlist.html" class="watchlist">My Watchlist</a>
-      </div>
-      <div class="search-container">
-        <div class="search-input-container">
-          <i class="fa-solid fa-magnifying-glass search-icon"></i>
-          <input
-            type="text"
-            name="search"
-            id="search"
-            class="search"
-            placeholder="Search for a movie"
-          />
-        </div>
-        <button class="btn btn--search" id="btn-search">Search</button>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <a href="index.html" class="watchlist">Search for movies</a>
       </div>
     </header>
     <main class="main">
       <div class="container">
-        <div class="movie-list" id="movie-list">
+        <div class="movie-list" id="watchlist-container">
           <div class="explore-container">
-            <i class="fa-solid fa-film explore-icon"></i>
-            <h2 class="explore-title">Start exploring</h2>
+            <h2 class="explore-title">
+              Your watchlist is looking a little empty...
+            </h2>
+            <div class="add-movie-container">
+              <i class="fa-solid fa-plus add-icon"></i>
+              <a href="index.html" class="add-movie">Let’s add some movies!</a>
+            </div>
           </div>
         </div>
       </div>
@@ -62,7 +54,6 @@
       <i class="fa-regular fa-moon moon-icon"></i>
       <i class="fa-regular fa-sun sun-icon hidden"></i>
     </button>
-    <div class="modal-container hidden" id="modal-container"></div>
     <script src="./js/script.js"></script>
   </body>
 </html>
