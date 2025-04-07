@@ -25,31 +25,44 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <h1>Find your film</h1>
-
-        <div class="search-container">
-          <div class="search-box">
-            <i class="fa-solid fa-magnifying-glass icon"></i>
-            <input
-              type="text"
-              id="input-search"
-              placeholder="Search for a movie..."
-            />
-          </div>
-          <button id="btn-search">Search</button>
+      <h1 class="heading-primary">Find your film</h1>
+      <div class="watchlist-container">
+        <i class="fa-regular fa-bookmark watchlist-icon"></i>
+        <a href="watchlist.html" class="watchlist">My Watchlist</a>
+      </div>
+      <div class="search-container">
+        <div class="search-input-container">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            class="search"
+            placeholder="Search for a movie"
+          />
         </div>
-        <div class="watchlist-container">
-          <i class="fa-solid fa-bookmark"></i>
-          <a href="watchlist.html" class="watchlist-link">My Watchlist</a>
-        </div>
+        <button class="btn btn--search" id="btn-search">Search</button>
       </div>
     </header>
     <main class="main">
       <div class="container">
-        <div class="movie-list" id="movie-list"></div>
+        <div class="movie-list" id="movie-list">
+          <div class="explore-container">
+            <i class="fa-solid fa-film explore-icon"></i>
+            <h2 class="explore-title">Start exploring</h2>
+          </div>
+        </div>
       </div>
     </main>
+    <button
+      class="btn btn--icon toggler"
+      id="toggler"
+      aria-label="Mode toggler"
+    >
+      <i class="fa-regular fa-moon moon-icon"></i>
+      <i class="fa-regular fa-sun sun-icon hidden"></i>
+    </button>
+    <div class="modal-container hidden" id="modal-container"></div>
     <script src="./js/script.js"></script>
   </body>
 </html>
