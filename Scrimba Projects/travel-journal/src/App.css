@@ -1,0 +1,79 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  color: #2b283a;
+}
+
+.header {
+  background-color: #f55a5a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  font-size: 1.4rem;
+  padding: 1.6rem 0;
+}
+
+.logo {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.logo-title {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.entry {
+  max-width: 76.8rem;
+  display: grid;
+  gap: 1rem;
+  padding: 3rem 1.5rem;
+}
+
+.entry-image {
+  border-radius: 5px;
+}
+
+.entry-content-top {
+  display: flex;
+  align-items: center;
+}
+
+.entry-location-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.entry-marker {
+  width: 1.5rem;
+}
+
+.entry-location {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.entry-map {
+  display: inline-block;
+  margin-left: auto;
+  color: #918e9b;
+}
+
+.entry-content-bottom {
+}
+
+.entry-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.entry-date {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.entry-description {
+  text-align: justify;
+}
