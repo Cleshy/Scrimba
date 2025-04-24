@@ -1,31 +1,23 @@
 import marker from "/assets/marker.png";
 
-export default function Entry() {
+export default function Entry({ travel }) {
   return (
     <article className="entry">
-      <img
-        className="entry-image"
-        src="https://scrimba.com/links/travel-journal-japan-image-url"
-        alt=""
-      />
+      <img className="entry-image" src={travel.img.src} alt={travel.img.alt} />
       <div className="entry-content">
         <div className="entry-content-top">
           <div className="entry-location-container">
             <img className="entry-marker" src={marker} alt="Marker icon" />
-            <span className="entry-location">Japan</span>
+            <span className="entry-location">{travel.country}</span>
           </div>
-          <a className="entry-map" href="#">
+          <a className="entry-map" href={travel.googleMapsLink} target="_blank">
             View on Google Maps
           </a>
         </div>
         <div className="entry-content-bottom">
-          <h1 className="entry-title">Mount Fuji</h1>
-          <p className="entry-date">12 Jan, 2023 - 24 Jan, 2023</p>
-          <p className="entry-description">
-            Mount Fuji is the tallest mountain in Japan, standing at 3,776
-            meters (12,380 feet). Mount Fuji is the single most popular tourist
-            site in Japan, for both Japanese and foreign tourists.
-          </p>
+          <h1 className="entry-title">{travel.title}</h1>
+          <p className="entry-date">{travel.dates}</p>
+          <p className="entry-description">{travel.text}</p>
         </div>
       </div>
     </article>
