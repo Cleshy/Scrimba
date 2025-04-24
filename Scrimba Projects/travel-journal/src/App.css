@@ -9,35 +9,52 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.7rem;
+  gap: 1rem;
   font-size: 1.4rem;
   padding: 1.6rem 0;
 }
 
 .logo {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .logo-title {
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 2.5rem;
+}
+
+.entry-container {
+  max-width: 120rem;
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 5rem;
+  padding: 0 1rem;
 }
 
 .entry {
-  max-width: 76.8rem;
-  display: grid;
-  gap: 1rem;
-  padding: 3rem 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 40rem;
+  margin: 0 auto;
 }
 
 .entry-image {
-  border-radius: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 25rem;
+  width: 100%;
+}
+
+.entry-content {
+  padding: 1rem 1.5rem 3rem 1.5rem;
 }
 
 .entry-content-top {
   display: flex;
   align-items: center;
+  margin-top: 0.75rem;
 }
 
 .entry-location-container {
@@ -47,26 +64,25 @@ body {
 }
 
 .entry-marker {
-  width: 1.5rem;
+  width: 1.25rem;
 }
 
 .entry-location {
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-size: 1.25rem;
 }
 
 .entry-map {
   display: inline-block;
   margin-left: auto;
   color: #918e9b;
-}
-
-.entry-content-bottom {
+  font-size: 1.25rem;
 }
 
 .entry-title {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.75rem;
+  margin: 1rem 0;
 }
 
 .entry-date {
