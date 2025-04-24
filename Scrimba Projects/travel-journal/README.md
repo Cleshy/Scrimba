@@ -1,12 +1,19 @@
-# React + Vite
+# Travel Journal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The **Travel Journal** is a simple web application that showcases a collection of famous travel destinations around the world. Each destination includes a title, country, travel dates, a brief description, and a link to its location on Google Maps. This project is designed to inspire travel enthusiasts and provide a visually appealing way to explore iconic landmarks.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Destination Details**: View information about each destination, including its name, country, and a brief description.
+- **Google Maps Integration**: Easily locate each destination with a direct link to Google Maps.
+- **Responsive Design**: The application is fully responsive and works seamlessly on all devices.
 
-## Expanding the ESLint configuration
+## How to Use
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Browse through the list of destinations.
+2. Click on the Google Maps link to explore the location further.
+3. Get inspired to plan your next trip!
+
+## Screenshot
+
+![Travel Journal](desktop.png)
