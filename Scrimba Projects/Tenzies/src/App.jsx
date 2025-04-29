@@ -16,3 +16,9 @@ function App() {
 }
 
 export default App;
+
+/*
+1. Add a timer and a roll counter to see how quickly you can win the game
+2. Style the dice to look like real dice with pips instead of numbers
+3. Deploy your project live for others to play!
+*/
