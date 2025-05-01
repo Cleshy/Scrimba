@@ -31,4 +31,4 @@ The goal is to **get all 9 dice to show the same value**. You can "hold" dice to
 
 ## 🖼️ Screenshot
 
-![Game Screenshot](./desktop.png)
+![Game Screenshot](./desktop.PNG)
