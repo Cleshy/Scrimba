@@ -1,0 +1,59 @@
+:root {
+  --bg-body: #282726;
+  --bg-btn: #fcba29;
+  --bg-input: #323232;
+  --clr-btn-border: #d7d7d7;
+  --clr-title: #f9f4da;
+  --clr-desription: #8e8e8e;
+  --clr-buttons: #1e1e1e;
+
+  --radius-btn: 4px;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg-body);
+  padding: 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.game-title {
+  color: var(--clr-title);
+}
+
+.game-description {
+  color: var(--clr-desription);
+}
+
+.letter-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+  gap: 2rem;
+}
+
+.letter {
+  height: 4rem;
+  width: 4rem;
+  font-size: 2rem;
+  background-color: var(--bg-btn);
+  border: 2px solid var(--clr-btn-border);
+  border-radius: var(--radius-btn);
+}
