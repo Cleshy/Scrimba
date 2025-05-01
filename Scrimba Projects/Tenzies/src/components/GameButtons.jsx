@@ -1,10 +1,29 @@
 import React from "react";
 
-export default function GameButtons() {
+function GameButtons({
+  isGameWon,
+  isGameRunning,
+  handleGameReset,
+  handleDieRolls,
+}) {
+  const buttonText = isGameRunning
+    ? "Roll"
+    : isGameWon
+    ? "New Game"
+    : "Start Game";
+
   return (
     <div className="game-buttons-container">
-      <button className="btn">Start Game</button>
-      <button className="btn">Reset</button>
+      <button className="btn" onClick={handleDieRolls}>
+        {buttonText}
+      </button>
+      {!isGameWon && isGameRunning && (
+        <button className="btn btn-reset" onClick={handleGameReset}>
+          Reset
+        </button>
+      )}
     </div>
   );
 }
+
+export default React.memo(GameButtons);

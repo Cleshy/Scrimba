@@ -1,17 +1,16 @@
 import React from "react";
 
-export default function Die() {
+function Die({ id, value, isHeld, handleDieHold }) {
   return (
-    <div className="die-container">
-      <button className="btn-die">1</button>
-      <button className="btn-die">2</button>
-      <button className="btn-die">3</button>
-      <button className="btn-die">4</button>
-      <button className="btn-die">5</button>
-      <button className="btn-die">6</button>
-      <button className="btn-die">1</button>
-      <button className="btn-die">2</button>
-      <button className="btn-die">3</button>
-    </div>
+    <>
+      <button
+        className={`btn-die ${isHeld ? "die-held" : undefined}`}
+        onClick={() => handleDieHold(id)}
+      >
+        {value}
+      </button>
+    </>
   );
 }
+
+export default React.memo(Die);
