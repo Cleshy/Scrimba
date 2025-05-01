@@ -1,16 +1,20 @@
 import "./App.css";
+import Confetti from "react-confetti";
+import GameContainer from "./components/GameContainer";
+import GameInfo from "./components/GameInfo";
 import GameBoard from "./components/GameBoard";
+import { useState } from "react";
 
 function App() {
+  const [showConfetti, setShowConfetti] = useState(false);
   return (
-    <section className="game-container">
-      <h1 class="game-heading">Tenzies</h1>
-      <p class="game-description">
-        Roll until all dice are the same. Click each die to freeze it at its
-        current value between rolls.
-      </p>
-      <GameBoard />
-    </section>
+    <>
+      {showConfetti && <Confetti />}
+      <GameContainer>
+        <GameInfo />
+        <GameBoard setShowConfetti={setShowConfetti} />
+      </GameContainer>
+    </>
   );
 }
 
