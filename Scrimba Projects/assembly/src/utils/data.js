@@ -39,6 +39,18 @@ export const languages = [
   "Assembly",
 ];
 
+export const farewellMessages = {
+  HTML: "Looks like your structure collapsed! 🧱",
+  CSS: "Style gone wild! No more colors for you. 🎨",
+  JavaScript: "The logic broke. Undefined behavior! 🧠",
+  React: "No more components to mount. 😵",
+  TypeScript: "Strong types couldn't save you. ☠️",
+  Node: "The server crashed... forever. 💀",
+  Python: "Something slipped in the whitespace... but you're still alive. 🐍",
+  Ruby: "No gems left to rescue you. 💎",
+  Assembly: "You’ve reached the bare metal. 💾",
+};
+
 export const words = [
   "aborts",
   "accepts",

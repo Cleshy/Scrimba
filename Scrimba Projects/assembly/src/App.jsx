@@ -1,7 +1,7 @@
-import "./App.css";
-import GameContainer from "./components/GameContainer";
-import GameInfo from "./components/GameInfo";
-import GameBoard from "./components/GameBoard";
+import "./styles/App.css";
+import GameContainer from "./components/Game/GameContainer";
+import GameInfo from "./components/Game/GameInfo";
+import GameBoard from "./components/Game/GameBoard";
 
 function App() {
   return (

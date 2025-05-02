@@ -9,7 +9,7 @@ export default function InputFields({ letters, currentWord }) {
         disabled={true}
         type="text"
         key={index}
-        class="input-field"
+        className="input-field"
         value={correctLetters.includes(letter) ? letter : ""}
       />
     );

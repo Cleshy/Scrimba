@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Message({ farewellMessages, showMessage }) {
+export default function Message({ showMessage }) {
   const style = {
     visibility: showMessage.show ? "visible" : "hidden",
   };
@@ -30,4 +30,12 @@ export default function Message({ farewellMessages, showMessage }) {
       </div>
     );
   }
+
+  return (
+    <div style={style} className="message-container">
+      <p className="message">
+        Something slipped in the whitespace... but you're still alive. 🐍
+      </p>
+    </div>
+  );
 }
