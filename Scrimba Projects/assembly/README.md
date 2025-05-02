@@ -32,4 +32,4 @@ src/
 
 ## 📸 Preview
 
-![Game Preview](./desktop.png)
+![Game Preview](./desktop.PNG)
