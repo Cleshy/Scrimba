@@ -2,6 +2,8 @@
 
 **Assembly: Endgame** is a frontend word-guessing game built with React. Inspired by Hangman, the game challenges the user to guess an 8-letter programming-related word in under 8 incorrect attempts. Each wrong guess knocks out a programming language, until only Assembly remains.
 
+### Live: https://cleshy-assembly.netlify.app/
+
 ## 🚀 Features
 
 - ✅ Word selection from a curated list of programming terms
