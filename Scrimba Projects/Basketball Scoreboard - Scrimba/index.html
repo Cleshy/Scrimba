@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Basketball Scoreboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="scoreboard">
+        <div class="home">
+          <h2 class="title">Home</h2>
+          <p data-team="home" class="score">0</p>
+          <div class="score-buttons">
+            <button data-team="home" data-value="1" class="score-btn">
+              +1
+            </button>
+            <button data-team="home" data-value="2" class="score-btn">
+              +2
+            </button>
+            <button data-team="home" data-value="3" class="score-btn">
+              +3
+            </button>
+          </div>
+        </div>
+        <div class="guest">
+          <h2 class="title">Guest</h2>
+          <p data-team="guest" class="score">0</p>
+          <div class="score-buttons">
+            <button data-team="guest" data-value="1" class="score-btn">
+              +1
+            </button>
+            <button data-team="guest" data-value="2" class="score-btn">
+              +2
+            </button>
+            <button data-team="guest" data-value="3" class="score-btn">
+              +3
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="btn-container">
+        <button class="reset">Reset</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

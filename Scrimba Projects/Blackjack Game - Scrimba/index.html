@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Blackjack Game</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1>Blackjack</h1>
+      </div>
+      <div class="game-container">
+        <div class="game-fields">
+          <div class="player-field dealer">
+            <h3 class="title">Dealer</h3>
+            <ul class="numbers dealer-numbers"></ul>
+            <p class="sum-text dealer-sum">Dealer Sum:</p>
+          </div>
+          <div class="player-field player">
+            <h3 class="title">Player</h3>
+            <ul class="numbers player-numbers"></ul>
+            <p class="sum-text player-sum">Player Sum:</p>
+          </div>
+        </div>
+        <p class="message"></p>
+      </div>
+      <div>
+        <div class="button-container">
+          <button class="btn btn-start" onclick="start()">Start Game</button>
+          <button class="btn btn-hit hidden" onclick="hit()">Hit</button>
+          <button class="btn btn-stand hidden" onclick="stand()">Stand</button>
+          <button class="btn btn-new hidden" onclick="setNewGame()">
+            New Game
+          </button>
+        </div>
+        <div class="info">
+          <h4>Wallet: <span class="wallet">1000</span>$</h4>
+          <h4>Round Cost: 50$</h4>
+        </div>
+        <button class="btn btn-reset hidden" onclick="reset()">Reset</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

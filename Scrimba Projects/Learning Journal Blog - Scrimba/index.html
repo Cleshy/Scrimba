@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cleshy's Journal is a personal blog documenting my journey as a bootcamp student, sharing coding tips, tutorials, and insights."
+    />
+    <meta
+      name="keywords"
+      content="coding blog, frontend development, bootcamp journey, web development, programming tutorials"
+    />
+    <meta name="author" content="Szilárd Czipa" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="en" />
+    <meta name="theme-color" content="#ff6b35" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cleshy's Journal - My Coding Journey" />
+    <meta
+      property="og:description"
+      content="Follow my journey as a bootcamp student, sharing coding tips, tutorials, and insights."
+    />
+    <meta property="og:url" content="https://www.cleshysjournal.com" />
+    <meta
+      property="og:image"
+      content="https://www.cleshysjournal.com/images/og-image.jpg"
+    />
+    <meta property="og:site_name" content="Cleshy's Journal" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cleshy's Journal - My Coding Journey" />
+    <meta
+      name="twitter:description"
+      content="Follow my journey as a bootcamp student, sharing coding tips, tutorials, and insights."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.cleshysjournal.com/images/og-image.jpg"
+    />
+    <meta name="twitter:site" content="@CleshyJournal" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.min.css" />
+
+    <title>Cleshy's Journal - My Coding Journey</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <div class="nav__container">
+          <a class="nav__logo" href="index.html">Cleshy's Journal</a>
+          <button
+            class="nav__mobile-toggle"
+            id="toggle-nav"
+            aria-label="Toggle navigation"
+          >
+            <span class="nav__mobile-line line-1"></span>
+            <span class="nav__mobile-line line-2"></span>
+            <span class="nav__mobile-line line-3"></span>
+          </button>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="index.html">Home</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="about.html">About</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="hero">
+        <div class="container">
+          <h1 class="hero__heading">My new journey as a bootcamp student.</h1>
+          <p class="hero__description">
+            After countless tutorials and blog posts, I chose Scrimba's Frontend
+            Path. <span>No regrets.</span>
+          </p>
+        </div>
+        <span class="image-credit image-credit--bottom-left">
+          Photo by
+          <a
+            class="credit-link"
+            href="https://unsplash.com/@joshuaryanphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            target="_blank"
+            >Joshua Reddekopp</a
+          >
+          on
+          <a
+            class="credit-link"
+            href="https://unsplash.com/photos/macbook-pro-on-brown-wooden-table-SyYmXSDnJ54?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            target="_blank"
+            >Unsplash</a
+          >
+        </span>
+      </div>
+      <section class="container">
+        <h2 class="heading-secondary">Recent Posts</h2>
+        <div class="posts__container" id="posts__container-home"></div>
+        <div id="view-more-btn">
+          <button class="btn btn--primary">View More</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__title">My Learning Journal</p>
+      <p class="footer__copyright">
+        Copyright &copy;<span class="year"></span>
+      </p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

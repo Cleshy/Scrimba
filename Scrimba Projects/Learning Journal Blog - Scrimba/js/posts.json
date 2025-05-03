@@ -1,0 +1,134 @@
+[
+  {
+    "id": "1a2b3c4d-1234-5678-9101-abcdefabcdef",
+    "image": "/images/blog_1.webp",
+    "alt": "Laptop on a wooden desk with a phone beside it",
+    "photographer": "Clay Banks",
+    "photographer_url": "https://unsplash.com/@claybanks",
+    "image_source": "https://unsplash.com/photos/oO6Gm16Cqcg",
+    "date": "2024-03-15",
+    "title": "Escaping the Tutorial Hell: Take control",
+    "description": "Spending countless hours on tutorials but still feeling lost? Here’s how I broke free from the cycle and started building real projects."
+  },
+  {
+    "id": "5e6f7g8h-2345-6789-1011-ghijklmnopqr",
+    "image": "/images/blog_2.webp",
+    "alt": "Man covering his face in frustration",
+    "photographer": "Sander Sammy",
+    "photographer_url": "https://unsplash.com/@sammywilliams",
+    "image_source": "https://unsplash.com/photos/ufgOEVZuHgM",
+    "date": "2024-02-20",
+    "title": "Impostor Syndrome in Coding: Why You’re Not a Fraud",
+    "description": "Every developer experiences impostor syndrome. This is my story of overcoming self-doubt and learning to embrace the journey."
+  },
+  {
+    "id": "9i0j1k2l-3456-7890-1121-stuvwxyzabcd",
+    "image": "/images/blog_3.webp",
+    "alt": "A black computer monitor displaying code",
+    "photographer": "Markus Spiske",
+    "photographer_url": "https://unsplash.com/@markusspiske",
+    "image_source": "https://unsplash.com/photos/bMvuh0YQQ68",
+    "date": "2024-01-10",
+    "title": "Debugging Nightmares: Staying Sane",
+    "description": "Staring at an error message for hours? Here are my debugging strategies and mindset shifts that made problem-solving easier."
+  },
+  {
+    "id": "3m4n5o6p-4567-8901-1221-abcdefghij12",
+    "image": "/images/blog_4.webp",
+    "alt": "JavaScript code displayed on a screen",
+    "photographer": "Gabriel Heinzer",
+    "photographer_url": "https://unsplash.com/@6heinz3r",
+    "image_source": "https://unsplash.com/photos/g5jpH62pwes",
+    "date": "2023-12-05",
+    "title": "JavaScript: The Language I Loved to Hate (At First)",
+    "description": "My initial experience with JavaScript was frustrating. But over time, I learned to appreciate its quirks. Here’s what changed my mind."
+  },
+  {
+    "id": "7q8r9s0t-5678-9012-1331-klmnopqrstuv",
+    "image": "/images/blog_5.webp",
+    "alt": "Smartphone placed on books with a blurred background",
+    "photographer": "KOBU Agency",
+    "photographer_url": "https://unsplash.com/@kobuagency",
+    "image_source": "https://unsplash.com/photos/ipARHaxETRk",
+    "date": "2023-11-15",
+    "title": "CSS Grid vs. Flexbox: Which One Should You Use?",
+    "description": "Both CSS Grid and Flexbox are powerful layout tools, but when should you use one over the other? Let’s break it down."
+  },
+  {
+    "id": "a1b2c3d4-6789-0123-1441-mnopqrstuvwx",
+    "image": "/images/blog_6.webp",
+    "alt": "Laptop screen showing lines of code",
+    "photographer": "Emile Perron",
+    "photographer_url": "https://unsplash.com/@emilep",
+    "image_source": "https://unsplash.com/photos/xrVDYZRGdw4",
+    "date": "2023-10-20",
+    "title": "The Day I Deployed My First Website",
+    "description": "Deployment is often overlooked in tutorials, but it’s crucial. Here’s what I wish I had known before pushing my first project live."
+  },
+  {
+    "id": "b2c3d4e5-7890-1234-1551-qrstuvwxyzab",
+    "image": "/images/blog_7.webp",
+    "alt": "Person typing on a laptop with a coffee mug beside it",
+    "photographer": "Christin Hume",
+    "photographer_url": "https://unsplash.com/@christinhumephoto",
+    "image_source": "https://unsplash.com/photos/Hcfwew744z4",
+    "date": "2024-03-01",
+    "title": "How I Built My First Portfolio Website",
+    "description": "Building a portfolio website is a rite of passage for developers. Here’s how I approached mine and lessons I learned along the way."
+  },
+  {
+    "id": "c3d4e5f6-8901-2345-1661-abcdefghijkl",
+    "image": "/images/blog_8.webp",
+    "alt": "Code editor on a laptop screen with a plant in the background",
+    "photographer": "Fatos Bytyqi",
+    "photographer_url": "https://unsplash.com/@fatosbytyqi",
+    "image_source": "https://unsplash.com/photos/7pCFUybP_P8",
+    "date": "2024-02-10",
+    "title": "Why Version Control is a Developer’s Best Friend",
+    "description": "Version control systems like Git are essential for developers. Here’s how I started using Git and why it transformed my workflow."
+  },
+  {
+    "id": "d4e5f6g7-9012-3456-1771-mnopqrstuvwx",
+    "image": "/images/blog_9.webp",
+    "alt": "Books and a laptop on a wooden desk",
+    "photographer": "Nick Morrison",
+    "photographer_url": "https://unsplash.com/@nickmorrison",
+    "image_source": "https://unsplash.com/photos/FHnnjk1Yj7Y",
+    "date": "2024-01-25",
+    "title": "Top 5 Resources That Helped Me Learn JavaScript",
+    "description": "From tutorials to documentation, these are the resources that made learning JavaScript easier and more enjoyable for me."
+  },
+  {
+    "id": "e5f6g7h8-0123-4567-1881-qrstuvwxyzcd",
+    "image": "/images/blog_10.webp",
+    "alt": "Person writing notes with a laptop in the background",
+    "photographer": "Green Chameleon",
+    "photographer_url": "https://unsplash.com/@craftedbygc",
+    "image_source": "https://unsplash.com/photos/s9CC2SKySJM",
+    "date": "2023-12-30",
+    "title": "The Importance of Taking Notes While Learning to Code",
+    "description": "Taking notes is an underrated skill for developers. Here’s how I use note-taking to retain knowledge and improve my coding skills."
+  },
+  {
+    "id": "f6g7h8i9-1234-5678-1991-abcdefghijklmn",
+    "image": "/images/blog_11.webp",
+    "alt": "Person debugging code on a laptop",
+    "photographer": "Kevin Ku",
+    "photographer_url": "https://unsplash.com/@ikukevk",
+    "image_source": "https://unsplash.com/photos/L8KQIPCODV8",
+    "date": "2023-11-05",
+    "title": "Debugging Like a Pro: Tips and Tricks for Beginners",
+    "description": "Debugging can be frustrating, but it’s a crucial skill. Here are my favorite tips and tools for finding and fixing bugs efficiently."
+  },
+  {
+    "id": "g7h8i9j0-2345-6789-2001-opqrstuvwxyzef",
+    "image": "/images/blog_12.webp",
+    "alt": "Laptop with a cup of coffee and a notebook",
+    "photographer": "Nathan Dumlao",
+    "photographer_url": "https://unsplash.com/@nate_dumlao",
+    "image_source": "https://unsplash.com/photos/6VhPY27jdps",
+    "date": "2023-10-01",
+    "title": "How I Stay Motivated While Learning to Code",
+    "description": "Staying motivated can be tough, especially when progress feels slow. Here’s how I keep myself inspired and on track."
+  }
+]

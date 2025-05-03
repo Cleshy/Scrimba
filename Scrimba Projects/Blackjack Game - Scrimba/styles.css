@@ -1,0 +1,130 @@
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  background: #1b1b1b;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.75);
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #ffd700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+}
+
+.game-container {
+  background: #222222;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.game-fields {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.player-field {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  background: #333333;
+  margin: 10px 0;
+  border: 2px solid #ffd700;
+}
+
+.numbers {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.8rem;
+}
+
+.message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #ffd700;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+
+.btn {
+  display: block;
+  width: 80%;
+  padding: 10px;
+  font-size: 1.2rem;
+  margin: 10px auto;
+  background: #222222;
+  color: white;
+  border: 2px solid #ffd700;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: #444444;
+  transform: scale(1.05);
+}
+
+.hidden {
+  display: none;
+}
+
+.info {
+  font-size: 1rem;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.current {
+  background-color: rgb(0, 59, 0);
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 8px;
+    width: 100%;
+  }
+
+  .numbers {
+    font-size: 1.2rem;
+  }
+
+  .game-fields {
+    flex-direction: column;
+  }
+}

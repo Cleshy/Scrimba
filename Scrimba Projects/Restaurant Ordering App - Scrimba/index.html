@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font: Smythe -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Smythe&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Restaurant Ordering App</title>
+  </head>
+  <body>
+    <header class="header container">
+      <p class="header-title">Jimmy's Diner</p>
+      <p class="header-description">The best burgers and pizzas in town.</p>
+    </header>
+    <main class="main container">
+      <div id="menu"></div>
+      <div class="orders hidden" id="orders">
+        <p class="orders-title">Your order</p>
+        <div class="order" id="order-list"></div>
+        <hr />
+        <div class="total">
+          <p class="total-title">Total price:</p>
+          <p class="total-price" id="total-price">$26</p>
+        </div>
+        <button class="btn-order" id="btn-order">Complete order</button>
+      </div>
+      <div class="hidden" id="message-box">
+        <p class="order-message" id="order-message"></p>
+      </div>
+      <div class="modal-container hidden" id="modal">
+        <div class="modal">
+          <h3 class="modal-title">Enter card details</h3>
+          <form class="modal-form" id="pay-form">
+            <input
+              class="modal-input"
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+            <input
+              class="modal-input"
+              type="text"
+              name="card"
+              placeholder="Enter card number"
+              required
+            />
+            <input
+              class="modal-input"
+              type="password"
+              name="cvv"
+              placeholder="Enter CVV"
+              required
+            />
+            <button class="btn-order" id="btn-pay">Pay</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
